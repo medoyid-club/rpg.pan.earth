@@ -1,0 +1,220 @@
+name: Club Critique
+description: Structured critique of TWM canon using Canon Tests and club-reading guidance
+title: "[Club Critique]: "
+labels:
+  - club-reading
+  - critique
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for adversarial clarification of [TWM First Scripture](https://github.com/medoyid-club/rpg.pan.earth/blob/main/twm_canon_club_release_2026-07-01.md).
+
+        A useful critique identifies **contradictions**, **missing boundaries**, **overgrown parts**, **useful distinctions**, **unclear authority**, **implementation pressure**, and the **real spine** of the text.
+
+        Reference sections by number (e.g. §4 Trees, §25 Canon Tests) or link to headings in the scripture file.
+
+  - type: input
+    id: scope
+    attributes:
+      label: Scope
+      description: What are you critiquing?
+      placeholder: "e.g. §21a Captured Technological Sovereignty, Appendix A, whole scripture spine"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: canon_status
+    attributes:
+      label: Material status (if applicable)
+      description: Is the target durable canon, candidate, or provisional?
+      options:
+        - Durable canon
+        - Candidate material
+        - Provisional material
+        - Mixed / unclear
+        - Not sure
+    validations:
+      required: false
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: One paragraph — your main claim about this part of TWM.
+      placeholder: "This section is strong/weak because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: spine
+    attributes:
+      label: Real spine
+      description: What is the essential operational claim here? What would remain if metaphor were shaved away?
+    validations:
+      required: false
+
+  - type: textarea
+    id: contradictions
+    attributes:
+      label: Contradictions
+      description: Internal tensions with other sections, invariants, or appendices.
+    validations:
+      required: false
+
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Missing or weak boundaries
+      description: Where should scope, authority, lifetime, or refusal be sharper?
+    validations:
+      required: false
+
+  - type: textarea
+    id: authority
+    attributes:
+      label: Unclear authority
+      description: Who decides what? Where is authority confused, duplicated, or hidden?
+    validations:
+      required: false
+
+  - type: textarea
+    id: distinctions
+    attributes:
+      label: Useful distinctions
+      description: Distinctions worth keeping, strengthening, or promoting toward canon.
+    validations:
+      required: false
+
+  - type: textarea
+    id: overgrowth
+    attributes:
+      label: Overgrown parts
+      description: Metaphor, repetition, or scope that should be trimmed, merged, or moved to appendix.
+    validations:
+      required: false
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Implementation pressure
+      description: What would builders get wrong? What operational test would expose the gap?
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Canon Tests (§25)
+
+        For each test, note **pass**, **fail**, **partial**, or **n/a**, with brief evidence. The metabolic constraint applies across all tests: is the complexity worth what it preserves?
+
+  - type: textarea
+    id: test_truth_pressure
+    attributes:
+      label: "1. Truth Pressure Test"
+      description: Does the mechanism preserve the right truth in the right place under operational pressure?
+      placeholder: "pass / fail / partial — evidence..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: test_fractal
+    attributes:
+      label: "2. Fractal Nature Test"
+      description: Does the same operational relation reappear across scale without violating locality, lifecycle, truth authority, or domain ignorance?
+    validations:
+      required: false
+
+  - type: textarea
+    id: test_stakeholder
+    attributes:
+      label: "3. Stakeholder Transmission Test"
+      description: Can a domain-aware stakeholder understand what it does, why it matters, and how the metaphor carries operational meaning?
+    validations:
+      required: false
+
+  - type: textarea
+    id: test_authority_mapping
+    attributes:
+      label: "4. Authority Mapping Test"
+      description: Can facts, fact clusters, authorities, proposers, projections, caches, effects, and canonization paths be named without contradiction?
+    validations:
+      required: false
+
+  - type: textarea
+    id: test_beneficiary
+    attributes:
+      label: "5. Beneficiary Orientation Test"
+      description: Whose life is improved, protected, clarified, stabilized, or made more capable?
+    validations:
+      required: false
+
+  - type: textarea
+    id: test_seasonal
+    attributes:
+      label: "6. Seasonal Timing Test"
+      description: Does knowledge arrive, incarnate, flow, harvest, or return to compost in its proper season and lawful carrier?
+    validations:
+      required: false
+
+  - type: textarea
+    id: test_becoming
+    attributes:
+      label: "7. Becoming Continuity Test"
+      description: Can source, posture, executable body, living participation, and Flower-level experience be traced without hidden jumps?
+    validations:
+      required: false
+
+  - type: textarea
+    id: test_four_causes
+    attributes:
+      label: "8. Four Causes Test (candidate)"
+      description: Can material, formal, efficient, and final causes be named without contradiction? Is final cause connected to declared benefit?
+    validations:
+      required: false
+
+  - type: textarea
+    id: test_capacity
+    attributes:
+      label: "9. Capacity and Capability Test (candidate)"
+      description: Is sustaining capacity distinguished from lawful authority? Is authority granted without ignoring what can be borne?
+    validations:
+      required: false
+
+  - type: textarea
+    id: cheating_patterns
+    attributes:
+      label: Cheating patterns (§26)
+      description: Does anything cheat? (metaphor hides mechanism, projection becomes authority, local state becomes canon, LLM proposal becomes execution, etc.)
+    validations:
+      required: false
+
+  - type: textarea
+    id: panopticum_check
+    attributes:
+      label: Panopticum self-check (§1a)
+      description: Does this pattern reproduce Panopticum or captured technological sovereignty logic despite TWM vocabulary?
+    validations:
+      required: false
+
+  - type: textarea
+    id: proposals
+    attributes:
+      label: Proposals
+      description: Concrete revisions — wording, boundary, invariant, appendix move, or candidate promotion/demotion.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: reader_type
+    attributes:
+      label: Reader context
+      options:
+        - label: Human reader
+        - label: AI-assisted reader
+        - label: Domain practitioner (information systems)
+        - label: Runtime / platform builder
+        - label: Modelling / OPM perspective
+    validations:
+      required: false
