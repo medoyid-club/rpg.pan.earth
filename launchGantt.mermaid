@@ -1,40 +1,47 @@
+---
+displayMode: compact
+---
 gantt
     title HomoCosmic.us — план подготовки к разработке
     dateFormat  YYYY-MM-DD
     axisFormat  %d %b
-    todayMarker on
+    todayMarker off
 
-    section Анализ рынка и аудитории
-    Анализ конкурентов                                                  :a1, 2026-07-20, 5d
-    Анализ целевой аудитории и сегментов игроков                        :a2, after a1, 4d
-    Валидация спроса                                                    :a3, after a2, 5d
+    section A Market and Auditory Analysis [ALL]
+    Competitors                                                         :a1, after z1, 1w
+    Auditory                                                            :a2, after a1, 1w
+    Validation                                                          :a3, after a2, 1w
 
-    section Бизнес-план и модель устойчивости
-    Модель монетизации без эксплуатации внимания                        :b1, after a3, 4d
-    Финансовая модель и бюджет разработки                               :b2, after b1, 4d
-    План привлечения финансирования / грантов                           :b3, after b2, 3d
+    section A Business Plan and Sustainment [ALL]
+    Finance model                                                       :b1, after a3, 1w
+    Monetization model                                                  :b2, after b1, 1w
+    Investment aquirement                                               :b3, after b2, 1w
 
-    section Дизайн и концепт игры
-    Геймдизайн-документ                                                 :c1, 2026-07-20, 6d
-    Проработка прогрессии и наград                                      :c2, after c1, 4d
-    Проработка социальных механик и границ приватности                  :c3, after c2, 4d
+    section Game design and content [DN]
+    Gamedesign document                                                 :c1, after z1, 2w
+    Social mechanics                                                    :c2, after c1, 1w
+    Leveling and Awards                                                 :c3, after c2, 1w
 
-    section TWM-архитектура
-    Таблица авторитетов для профиля/Древа игрока                        :d1, 2026-07-20, 4d
-    Прогон Cosmonaut.ing через Канонические Тесты TWM                   :d2, after d1, 5d
-    OPM-модель                                                          :d3, after d2, 5d
+    section TWM architecture [PP]
+    Authority table for the Player                                      :d1, after z1, 1w
+    Validation thru the TWM canon                                       :d2, after d1, 1w
+    OPM model                                                           :d3, after d2, 1w
 
-    section Юридические и этические вопросы
-    Анализ защиты данных и цифрового суверенитета игрока                :e1, after c3, 4d
-    Возрастной рейтинг и этическая экспертиза психотипирования          :e2, after e1, 3d
-    Черновик пользовательского соглашения и политики приватности        :e3, after e2, 3d
+    section Jurisdical and ethical evaluation [NT]
+    Data security and Digital suverenity                                 :e1, after c3, 1w
+    Age rating and ethical review of psycho-typing                      :e2, after e1, 1w
+    Draft terms of service and privacy policy                           :e3, after e2, 1w
 
-    section Техническая проверка концепции
-    Оценка технологического стека                                       :f1, after d3, 3d
-    Прототип: рождение Врат и первого Древа                             :f2, after f1, 5d
+    section Technical Proof of Concept [PP]
+    Technology stack evaluation                                         :f1, after d3, 1w
+    Prototype: Gate and first Tree birth flow                           :f2, after f1, 1w
 
-    section Готовность к разработке
-    Сведение бизнес-плана, дизайна и архитектуры в единый пакет         :g1, after e3, 3d
-    Питч / презентация для стейкхолдеров                                :g2, after g1, 2d
-    Запуск разработки                                                   :milestone, after f2, 0d
+    section Development Readiness [ALL]
+    Consolidate BP, design, and architecture                            :g1, after e3, 1w
+    Pitch/presentation for stakeholders                                 :g2, after g1, 1w
 
+    section Planning
+    Diagram                                                             :active, z1, 2026-07-23, 1w
+    Start                                                               :crit, milestone, after z1
+    Kick Off                                                            :milestone, after g2, 0d
+    
