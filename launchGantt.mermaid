@@ -1,12 +1,15 @@
----
-displayMode: compact
----
 gantt
     title HomoCosmic.us — план подготовки к разработке
     dateFormat  YYYY-MM-DD
     axisFormat  %d %b
-    todayMarker off
+    todayMarker on
 
+    section Planning
+    Diagram                                                             :active, z1, 2026-07-23, 1w
+    Start                                                               :crit, milestone, after z1
+    Run                                                                 :z2, after z1, 9w
+    Kick Off                                                            :milestone, after z2, 0d
+    
     section A Market and Auditory Analysis [ALL]
     Competitors                                                         :a1, after z1, 1w
     Auditory                                                            :a2, after a1, 1w
@@ -28,7 +31,7 @@ gantt
     OPM model                                                           :d3, after d2, 1w
 
     section Jurisdical and ethical evaluation [NT]
-    Data security and Digital suverenity                                 :e1, after c3, 1w
+    Data security and Digital suverenity                                :e1, after c3, 1w
     Age rating and ethical review of psycho-typing                      :e2, after e1, 1w
     Draft terms of service and privacy policy                           :e3, after e2, 1w
 
@@ -39,9 +42,3 @@ gantt
     section Development Readiness [ALL]
     Consolidate BP, design, and architecture                            :g1, after e3, 1w
     Pitch/presentation for stakeholders                                 :g2, after g1, 1w
-
-    section Planning
-    Diagram                                                             :active, z1, 2026-07-23, 1w
-    Start                                                               :crit, milestone, after z1
-    Kick Off                                                            :milestone, after g2, 0d
-    
